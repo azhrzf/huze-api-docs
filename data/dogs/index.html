@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>/dogs - Huze Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "/dogs";
+        var mkdocs_page_input_path = "data\\dogs.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Huze Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Huze Api Documentation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Account</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../account/authentications/">/authentications</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../account/login/">/login</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../account/register/">/register</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../account/users/">/users</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Data</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../cats/">/cats</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">/dogs</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#get-dogs">GET /dogs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get-dogsid">GET /dogs/{id}</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Marketplace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../marketplace/charts/">/charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../marketplace/products/">/products</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Model</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../model/">/</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../pets/pets/">/pets</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Huze Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Data &raquo;</li>
+      <li>/dogs</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="dogs">/dogs</h1>
+<ul>
+<li><a href="#get-dogs">GET /dogs</a></li>
+<li><a href="#get-dogsid">GET /dogs/{id}</a></li>
+</ul>
+<hr />
+<h2 id="get-dogs">GET /dogs</h2>
+<p>Response:</p>
+<pre><code class="language-json">{
+    &quot;status&quot;: &quot;success&quot;,
+    &quot;data&quot;: {
+        &quot;dogs&quot;: [
+            {
+                &quot;id&quot;: &quot;chihuahua&quot;,
+                &quot;breed&quot;: &quot;Chihuahua&quot;,
+                &quot;description&quot;: &quot;Anjing Chihuahua adalah salah satu ras anjing terkecil di dunia. Mereka berasal dari Meksiko dan dinamai berdasarkan negara bagian Chihuahua di Meksiko. Anjing Chihuahua dikenal dengan tubuh mungil, telinga yang besar, dan mata yang bulat. Mereka memiliki berbagai varietas bulu, termasuk yang berbulu pendek dan berbulu panjang. Meskipun ukurannya kecil, Chihuahua memiliki kepribadian yang hidup, ceria, dan penuh keberanian. Mereka biasanya sangat setia kepada pemiliknya dan cukup protektif terhadap mereka. Anjing Chihuahua juga cerdas dan dapat menjadi teman yang baik untuk keluarga atau individu yang aktif.&quot;,
+                &quot;food&quot;: &quot;Makanan yang baik untuk anjing Chihuahua adalah makanan yang mengandung nutrisi seimbang dan sesuai dengan kebutuhan mereka. Karena ukuran tubuh mereka yang kecil, penting untuk memberikan makanan yang dirancang khusus untuk anjing ras kecil. Makanan kering dengan kandungan protein berkualitas tinggi, lemak sehat, serat, serta vitamin dan mineral penting adalah pilihan yang baik. Hindari memberikan makanan manusia yang tidak aman atau berpotensi berbahaya bagi mereka, seperti makanan yang mengandung bawang, cokelat, atau makanan berlemak tinggi. Penting juga untuk memberikan porsi makan yang tepat sesuai dengan ukuran dan tingkat aktivitas Chihuahua. Konsultasikan dengan dokter hewan untuk mendapatkan rekomendasi yang lebih spesifik.&quot;,
+                &quot;care&quot;: &quot;Meskipun ukuran Chihuahua kecil, mereka tetap membutuhkan olahraga dan pelatihan. Mereka memiliki energi yang cukup, siap bermain sepanjang waktu. Chihuahua menikmati jalan-jalan, bermain di halaman dengan pengawasan, dan mengambil mainan. Namun, penting untuk memastikan mereka tidak kelelahan, terutama pada hari yang panas. Chihuahua sebaiknya tidak tinggal di luar rumah karena risiko diserang oleh burung pemangsa, serigala, atau anjing yang lebih besar. Pelatihan Chihuahua bisa menyenangkan. Mereka sukses dalam olahraga anjing seperti agility dan kedisiplinan dasar. Housetraining juga penting, dengan mengajarkan mereka jadwal konsisten untuk buang air dan menggunakan kandang ketika tidak dapat diawasi. Gunakan teknik penguatan positif dalam pelatihan Chihuahua.&quot;,
+                &quot;image&quot;: &quot;https://storage.googleapis.com/huze-images/chihuahua.jpg&quot;,
+                &quot;characteristics&quot;: {
+                    &quot;id&quot;: &quot;chihuahua&quot;,
+                    &quot;life_span&quot;: &quot;10 - 18 tahun&quot;,
+                    &quot;height&quot;: &quot;6 - 9 inci&quot;,
+                    &quot;weight&quot;: &quot;3 - 6 pon&quot;,
+                    &quot;origin&quot;: &quot;Meksiko&quot;,
+                    &quot;adaptability&quot;: 3,
+                    &quot;friendliness&quot;: 4,
+                    &quot;hngneeds&quot;: 2,
+                    &quot;trainability&quot;: 3,
+                    &quot;exercise&quot;: 3
+                }
+            },
+            {
+                &quot;id&quot;: &quot;samoyed&quot;,
+                &quot;breed&quot;: &quot;Samoyed&quot;,
+                &quot;description&quot;: &quot;Anjing Samoyed memiliki sejarah panjang sebagai anjing penggembala dan penarik kereta di Siberia. Mereka berasal dari Suku Samoyed, yang menggunakan mereka untuk menggembalakan ternak dan menjaga suhu tubuh di lingkungan yang ekstrem. Samoyed adalah anjing berukuran sedang dengan mantel tebal dan bulu putih yang indah. Mereka memiliki wajah yang ramah, mata yang cerah, dan senyum yang khas. Samoyed adalah anjing yang ceria, ramah, dan setia kepada keluarganya. Mereka cenderung bersahabat dengan anak-anak dan hewan peliharaan lainnya. Samoyed membutuhkan latihan yang cukup dan perhatian dari pemiliknya untuk memastikan kebahagiaan dan kesehatan mereka.&quot;,
+                &quot;food&quot;: &quot;Makanan yang baik untuk anjing Samoyed adalah makanan yang mengandung nutrisi seimbang dan berkualitas. Pilih makanan kering atau basah yang dirancang khusus untuk anjing besar dan aktif. Pastikan makanan mengandung protein berkualitas tinggi, lemak sehat, serat, serta vitamin dan mineral penting. Samoyed cenderung memiliki masalah dengan kegemukan, jadi penting untuk mengontrol porsi makanan dan menjaga berat badan yang sehat. Sajikan makanan dalam porsi yang sesuai dengan ukuran dan tingkat aktivitas Samoyed. Konsultasikan dengan dokter hewan untuk mendapatkan rekomendasi yang lebih spesifik dan sesuai dengan kebutuhan individu anjing Samoyed Anda.&quot;,
+                &quot;care&quot;: &quot;Samoyed aktif, butuh ruang, dan latihan terus-menerus. Cocok untuk rumah dengan halaman besar yang aman. Ikatan penting saat di tempat umum. Cocok untuk iklim dingin, sensitif terhadap panas. Batasi latihan saat cuaca panas. Makanan berkualitas rendah kalori saat pertumbuhan cepat. Hindari aktivitas berlebihan dan berat pada sendi saat masih muda. Sosialisasi penting, kenalkan pada orang, hewan, dan situasi yang berbeda. Kelas anak anjing dan kepatuhan disarankan.&quot;,
+                &quot;image&quot;: &quot;https://storage.googleapis.com/huze-images/samoyed.jpg&quot;,
+                &quot;characteristics&quot;: {
+                    &quot;id&quot;: &quot;samoyed&quot;,
+                    &quot;life_span&quot;: &quot;12 - 14 tahun&quot;,
+                    &quot;height&quot;: &quot;1 kaki 7 inci - 2 kaki&quot;,
+                    &quot;weight&quot;: &quot;50 - 60 pon&quot;,
+                    &quot;origin&quot;: &quot;Rusia&quot;,
+                    &quot;adaptability&quot;: 3,
+                    &quot;friendliness&quot;: 5,
+                    &quot;hngneeds&quot;: 3,
+                    &quot;trainability&quot;: 4,
+                    &quot;exercise&quot;: 4
+                }
+            },
+        ]
+    }
+}
+</code></pre>
+<hr />
+<h2 id="get-dogsid">GET /dogs/{id}</h2>
+<p>Parameter: id</p>
+<p>Example: dogs/ragdoll</p>
+<p>Response:</p>
+<pre><code class="language-json">{
+    &quot;status&quot;: &quot;success&quot;,
+    &quot;data&quot;: {
+        &quot;dogs&quot;: [
+            {
+                &quot;id&quot;: &quot;chihuahua&quot;,
+                &quot;breed&quot;: &quot;Chihuahua&quot;,
+                &quot;description&quot;: &quot;Anjing Chihuahua adalah salah satu ras anjing terkecil di dunia. Mereka berasal dari Meksiko dan dinamai berdasarkan negara bagian Chihuahua di Meksiko. Anjing Chihuahua dikenal dengan tubuh mungil, telinga yang besar, dan mata yang bulat. Mereka memiliki berbagai varietas bulu, termasuk yang berbulu pendek dan berbulu panjang. Meskipun ukurannya kecil, Chihuahua memiliki kepribadian yang hidup, ceria, dan penuh keberanian. Mereka biasanya sangat setia kepada pemiliknya dan cukup protektif terhadap mereka. Anjing Chihuahua juga cerdas dan dapat menjadi teman yang baik untuk keluarga atau individu yang aktif.&quot;,
+                &quot;food&quot;: &quot;Makanan yang baik untuk anjing Chihuahua adalah makanan yang mengandung nutrisi seimbang dan sesuai dengan kebutuhan mereka. Karena ukuran tubuh mereka yang kecil, penting untuk memberikan makanan yang dirancang khusus untuk anjing ras kecil. Makanan kering dengan kandungan protein berkualitas tinggi, lemak sehat, serat, serta vitamin dan mineral penting adalah pilihan yang baik. Hindari memberikan makanan manusia yang tidak aman atau berpotensi berbahaya bagi mereka, seperti makanan yang mengandung bawang, cokelat, atau makanan berlemak tinggi. Penting juga untuk memberikan porsi makan yang tepat sesuai dengan ukuran dan tingkat aktivitas Chihuahua. Konsultasikan dengan dokter hewan untuk mendapatkan rekomendasi yang lebih spesifik.&quot;,
+                &quot;care&quot;: &quot;Meskipun ukuran Chihuahua kecil, mereka tetap membutuhkan olahraga dan pelatihan. Mereka memiliki energi yang cukup, siap bermain sepanjang waktu. Chihuahua menikmati jalan-jalan, bermain di halaman dengan pengawasan, dan mengambil mainan. Namun, penting untuk memastikan mereka tidak kelelahan, terutama pada hari yang panas. Chihuahua sebaiknya tidak tinggal di luar rumah karena risiko diserang oleh burung pemangsa, serigala, atau anjing yang lebih besar. Pelatihan Chihuahua bisa menyenangkan. Mereka sukses dalam olahraga anjing seperti agility dan kedisiplinan dasar. Housetraining juga penting, dengan mengajarkan mereka jadwal konsisten untuk buang air dan menggunakan kandang ketika tidak dapat diawasi. Gunakan teknik penguatan positif dalam pelatihan Chihuahua.&quot;,
+                &quot;image&quot;: &quot;https://storage.googleapis.com/huze-images/chihuahua.jpg&quot;,
+                &quot;characteristics&quot;: {
+                    &quot;id&quot;: &quot;chihuahua&quot;,
+                    &quot;life_span&quot;: &quot;10 - 18 tahun&quot;,
+                    &quot;height&quot;: &quot;6 - 9 inci&quot;,
+                    &quot;weight&quot;: &quot;3 - 6 pon&quot;,
+                    &quot;origin&quot;: &quot;Meksiko&quot;,
+                    &quot;adaptability&quot;: 3,
+                    &quot;friendliness&quot;: 4,
+                    &quot;hngneeds&quot;: 2,
+                    &quot;trainability&quot;: 3,
+                    &quot;exercise&quot;: 3
+                }
+            }
+        ]
+    }
+}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../cats/" class="btn btn-neutral float-left" title="/cats"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../marketplace/charts/" class="btn btn-neutral float-right" title="/charts">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../cats/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../marketplace/charts/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

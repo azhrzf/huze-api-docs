@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>/charts - Huze Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "/charts";
+        var mkdocs_page_input_path = "marketplace\\charts.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Huze Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Huze Api Documentation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Account</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../account/authentications/">/authentications</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../account/login/">/login</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../account/register/">/register</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../account/users/">/users</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Data</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data/cats/">/cats</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data/dogs/">/dogs</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Marketplace</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">/charts</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#post-charts">POST /charts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get-charts">GET /charts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get-chartsid">GET /charts/{id}</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#delete-chartsid">DELETE /charts/{id}</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../products/">/products</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Model</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../model/">/</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../pets/pets/">/pets</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Huze Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Marketplace &raquo;</li>
+      <li>/charts</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="charts">/charts</h1>
+<ul>
+<li><a href="#post-charts">POST /charts</a></li>
+<li><a href="#get-charts">GET /charts</a></li>
+<li><a href="#get-chartsid">GET /charts/{id}</a></li>
+<li><a href="#delete-chartsid">DELETE /charts/{id}</a></li>
+</ul>
+<hr />
+<h2 id="post-charts">POST /charts</h2>
+<p>Headers:</p>
+<pre><code class="language-json">{
+    &quot;Authorization&quot;: &quot;urAccesToken&quot;
+}
+</code></pre>
+<p>Body:</p>
+<pre><code class="language-json">{
+    &quot;email&quot;: &quot;uremail@gmail.com&quot;,
+    &quot;password&quot;: &quot;urpassword&quot;
+}
+</code></pre>
+<p>Response:</p>
+<pre><code class="language-json">{
+    &quot;status&quot;: &quot;success&quot;,
+    &quot;data&quot;: {
+        &quot;chart&quot;: {
+            &quot;id&quot;: &quot;chart-pvMXaKdz5dzzW0QV&quot;,
+            &quot;fkProduct&quot;: &quot;product-1&quot;,
+            &quot;totalPrice&quot;: 1200000,
+            &quot;quanitity&quot;: 2,
+            &quot;date&quot;: &quot;2023-06-10T13:26:53.849Z&quot;,
+            &quot;status&quot;: &quot;Belum dibayar&quot;,
+            &quot;owner&quot;: &quot;user-vCHh83xy_WRnzXln&quot;,
+            &quot;name&quot;: &quot;GPS Tracker Hewan Peliharaan&quot;
+        }
+    }
+}
+</code></pre>
+<hr />
+<h2 id="get-charts">GET /charts</h2>
+<p>Headers:</p>
+<pre><code class="language-json">{
+    &quot;Authorization&quot;: &quot;urAccesToken&quot;
+}
+</code></pre>
+<p>Response:</p>
+<pre><code class="language-json">{
+    &quot;status&quot;: &quot;success&quot;,
+    &quot;data&quot;: {
+        &quot;charts&quot;: [
+            {
+                &quot;id&quot;: &quot;chart-pvMXaKdz5dzzW0QV&quot;,
+                &quot;fkProduct&quot;: &quot;product-1&quot;,
+                &quot;totalPrice&quot;: 1200000,
+                &quot;quanitity&quot;: 2,
+                &quot;date&quot;: &quot;2023-06-10T13:26:53.849Z&quot;,
+                &quot;status&quot;: &quot;Belum dibayar&quot;,
+                &quot;owner&quot;: &quot;user-vCHh83xy_WRnzXln&quot;,
+                &quot;name&quot;: &quot;GPS Tracker Hewan Peliharaan&quot;
+            },
+            {
+                &quot;id&quot;: &quot;chart-tCx8ExDQgwTLMeQW&quot;,
+                &quot;fkProduct&quot;: &quot;product-1&quot;,
+                &quot;totalPrice&quot;: 1200000,
+                &quot;quanitity&quot;: 2,
+                &quot;date&quot;: &quot;2023-06-10T16:10:30.830Z&quot;,
+                &quot;status&quot;: &quot;Belum dibayar&quot;,
+                &quot;owner&quot;: &quot;user-vCHh83xy_WRnzXln&quot;,
+                &quot;name&quot;: &quot;GPS Tracker Hewan Peliharaan&quot;
+            }
+        ]
+    }
+}
+</code></pre>
+<hr />
+<h2 id="get-chartsid">GET /charts/{id}</h2>
+<p>Parameter: id</p>
+<p>Example: charts/chart-1</p>
+<p>Headers:</p>
+<pre><code class="language-json">{
+    &quot;Authorization&quot;: &quot;urAccesToken&quot;
+}
+</code></pre>
+<p>Response:</p>
+<pre><code class="language-json">{
+    &quot;status&quot;: &quot;success&quot;,
+    &quot;data&quot;: {
+        &quot;chart&quot;: {
+            &quot;id&quot;: &quot;chart-yKKrPksQvtgfMQID&quot;,
+            &quot;fkProduct&quot;: &quot;product-1&quot;,
+            &quot;totalPrice&quot;: 1200000,
+            &quot;quanitity&quot;: 2,
+            &quot;date&quot;: &quot;2023-06-10T16:11:12.713Z&quot;,
+            &quot;status&quot;: &quot;Belum dibayar&quot;,
+            &quot;owner&quot;: &quot;user-vCHh83xy_WRnzXln&quot;,
+            &quot;name&quot;: &quot;GPS Tracker Hewan Peliharaan&quot;
+        }
+    }
+}
+</code></pre>
+<hr />
+<h2 id="delete-chartsid">DELETE /charts/{id}</h2>
+<p>Parameter: id</p>
+<p>Example: charts/u1sansajf</p>
+<p>Headers:</p>
+<pre><code class="language-json">{
+    &quot;Authorization&quot;: &quot;urAccesToken&quot;
+}
+</code></pre>
+<p>Response:</p>
+<pre><code class="language-json">{
+    &quot;status&quot;: &quot;success&quot;,
+    &quot;message&quot;: &quot;Chart berhasil dihapus&quot;
+}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../data/dogs/" class="btn btn-neutral float-left" title="/dogs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../products/" class="btn btn-neutral float-right" title="/products">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../data/dogs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../products/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

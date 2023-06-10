@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Huze Documentation</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Huze Api Documentation";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Huze Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href=".">Huze Api Documentation</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#base-url">Base URL</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#list-of-contents">List of contents</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Account</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="account/authentications/">/authentications</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="account/login/">/login</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="account/register/">/register</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="account/users/">/users</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Data</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="data/cats/">/cats</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="data/dogs/">/dogs</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Marketplace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="marketplace/charts/">/charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="marketplace/products/">/products</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Model</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="model/">/</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="pets/pets/">/pets</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Huze Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li>Huze Api Documentation</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="huze-api-documentation">Huze Api Documentation</h1>
+<p>The Huze API is a web service that provides access to various functionalities of the Huze project. It utilizes bearer token authentication for secure access to the API endpoints. To access the Huze API, you need to obtain a bearer token by authenticating with valid credentials. The token should be included in the Authorization header of each API request.</p>
+<p>The Huze API supports the following functionalities:</p>
+<ol>
+<li>User Management: Allows users to register, log in, and manage their profile information.</li>
+<li>Post Management: Enables users to create, retrieve, update, and delete posts.</li>
+</ol>
+<p>To interact with the Huze API, send HTTP requests to the appropriate endpoints, providing the required parameters and including the bearer token in the request headers. The API responds with JSON data containing the results or error messages.</p>
+<p>Ensure that you include the bearer token in each request's header to authenticate your requests properly and gain access to the authorized functionalities. Refer to the API documentation for detailed information on the available endpoints, request parameters, and response formats. Please note that unauthorized access or misuse of the Huze API may result in restrictions or account suspension.</p>
+<hr />
+<h2 id="base-url">Base URL</h2>
+<ol>
+<li>The base URL for all API endpoints is: <code>https://huze-management.et.r.appspot.com/v1</code></li>
+<li>The base url for processing the model and using machine learning is: <code>https://backend-flaskh5-nyighyk53q-et.a.run.app</code></li>
+</ol>
+<hr />
+<h2 id="list-of-contents">List of contents</h2>
+<ol>
+<li>
+<p><strong>Related to Registration and User Login</strong></p>
+<ul>
+<li><a href="account/register/">/register</a></li>
+<li><a href="account/users/">/users</a></li>
+<li><a href="account/login/">/login</a></li>
+<li><a href="account/authentications/">/authentications</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Related to Favorite Pets</strong></p>
+<ul>
+<li><a href="pets/pets/">/pets</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Related to Marketplace</strong></p>
+<ul>
+<li><a href="marketplace/charts/">/charts</a></li>
+<li><a href="marketplace/products/">/products</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Related to Cats and Dogs Data</strong></p>
+<ul>
+<li><a href="data/cats/">/cats</a></li>
+<li><a href="data/dogs/">/dogs</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Get Model Processing</strong></p>
+<ul>
+<li><a href="model/">/</a></li>
+</ul>
+</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="account/authentications/" class="btn btn-neutral float-right" title="/authentications">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="account/authentications/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.4.3
+Build Date UTC : 2023-06-10 17:06:34.861405+00:00
+-->
