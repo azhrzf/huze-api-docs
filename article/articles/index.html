@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>/articles - Huze Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "/articles";
+        var mkdocs_page_input_path = "article\\articles.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Huze Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Huze Api Documentation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Account</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../account/authentications/">/authentications</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../account/login/">/login</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../account/register/">/register</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../account/users/">/users</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Article</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">/articles</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#get-articles">GET /articles</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get-articlesid">GET /articles/{id}</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Data</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data/cats/">/cats</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data/dogs/">/dogs</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Marketplace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../marketplace/charts/">/charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../marketplace/products/">/products</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Model</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../model/">/</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../pets/pets/">/pets</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Huze Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Article &raquo;</li>
+      <li>/articles</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="articles">/articles</h1>
+<ul>
+<li><a href="#get-articles">GET /articles</a></li>
+<li><a href="#get-articlesid">GET /articles/{id}</a></li>
+</ul>
+<hr />
+<h2 id="get-articles">GET /articles</h2>
+<p>Response:</p>
+<pre><code class="language-json">{
+    &quot;status&quot;: &quot;success&quot;,
+    &quot;data&quot;: {
+        &quot;articles&quot;: [
+            {
+                &quot;id&quot;: &quot;article-1&quot;,
+                &quot;writer&quot;: &quot;Huze Official&quot;,
+                &quot;title&quot;: &quot;Panduan Praktis untuk Menjaga dan Merawat Kucing Sphynx&quot;,
+                &quot;thumbnail&quot;: &quot;https://storage.googleapis.com/huze-images/2-article-1.png&quot;,
+                &quot;article&quot;: &quot;Menjaga dan merawat kucing Sphynx melibatkan perhatian khusus terhadap beberapa aspek penting. Pertama-tama, perawatan kulit menjadi fokus utama karena kulit kucing Sphynx cenderung sensitif dan rentan terhadap masalah kulit. Rutin mandikan kucing Sphynx menggunakan sampo khusus dan pastikan kulitnya kering sepenuhnya setelah mandi. Gunakan pelembap yang direkomendasikan oleh dokter hewan untuk menjaga kelembapan kulit mereka. Selain itu, lakukan pemeriksaan rutin pada kulit mereka untuk mendeteksi iritasi atau luka, dan jika ada masalah, segera berkonsultasi dengan dokter hewan.\n\nSelain perawatan kulit, kebersihan juga merupakan hal penting dalam merawat kucing Sphynx. Karena mereka tidak memiliki bulu yang dapat menyerap minyak dan kotoran, perhatikan kebersihan telinga mereka dengan membersihkannya secara teratur menggunakan kapas lembab atau cairan pembersih telinga yang disarankan. Sikat gigi kucing Sphynx minimal dua kali seminggu dan periksa serta bersihkan kuku mereka secara rutin untuk mencegah masalah kesehatan dan menjaga kebersihan mereka.\n\nAspek nutrisi juga tidak boleh diabaikan. Pastikan Anda memberikan makanan yang dirancang khusus untuk kucing Sphynx, yang mengandung protein yang cukup dan nutrisi penting lainnya. Hindari memberikan makanan manusia atau makanan yang tidak aman bagi kucing, dan berikan makanan dalam porsi yang tepat sesuai dengan petunjuk pada kemasan. Dengan mengatur pola makan yang baik, Anda dapat menjaga berat badan kucing Sphynx tetap sehat.\n\nTerakhir, perlindungan dari suhu ekstrem sangat penting untuk kucing Sphynx. Karena mereka tidak memiliki bulu sebagai pelindung, perhatikan suhu ruangan dan hindari perubahan suhu yang drastis. Selama musim dingin, berikan pakaian kucing atau sediakan tempat berjemur yang hangat. Di musim panas, jaga agar mereka tidak terpapar sinar matahari secara langsung, dan sediakan tempat berlindung yang sejuk. Dengan melakukan ini, Anda dapat menjaga kucing Sphynx tetap nyaman dan aman dari suhu ekstrem.\n\nDengan memberikan perawatan yang tepat dan memenuhi kebutuhan khusus kucing Sphynx, Anda akan membantu mereka hidup sehat, bahagia, dan nyaman. Tetaplah berkonsultasi dengan dokter hewan jika Anda memiliki pertanyaan atau kekhawatiran terkait kesehatan kucing Sphynx Anda.&quot;,
+                &quot;tag&quot;: &quot;Perawatan&quot;
+            },
+            {
+                &quot;id&quot;: &quot;article-2&quot;,
+                &quot;writer&quot;: &quot;Huze Official&quot;,
+                &quot;title&quot;: &quot;Menjaga Asupan Makanan yang Sehat untuk Kucing: Panduan Praktis&quot;,
+                &quot;thumbnail&quot;: &quot;https://storage.googleapis.com/huze-images/2-article-2.png&quot;,
+                &quot;article&quot;: &quot;Asupan makanan yang tepat sangat penting bagi kesehatan dan kesejahteraan kucing kita. Memastikan bahwa kucing mendapatkan nutrisi yang seimbang dan berkualitas adalah kunci untuk menjaga berat badan yang sehat, sistem pencernaan yang baik, dan mencegah masalah kesehatan yang berhubungan dengan pola makan. Dalam artikel ini, kami akan memberikan panduan praktis tentang cara menjaga asupan makanan yang sehat untuk kucing.\n\nJenis Makanan yang Tepat:\nAda beberapa jenis makanan yang dapat diberikan kepada kucing, termasuk makanan kering (kibble) dan makanan basah (kaleng atau makanan segar). Keduanya memiliki kelebihan dan kekurangan masing-masing. Pilihlah makanan yang memiliki kualitas baik dan sesuai dengan kebutuhan kucing. Pastikan makanan tersebut mengandung protein hewani yang cukup, lemak sehat, vitamin, mineral, dan serat.\n\nDiet Berdasarkan Usia dan Kondisi Kesehatan:\nSetiap fase kehidupan kucing memiliki kebutuhan nutrisi yang berbeda. Kucing anak-anak membutuhkan makanan yang kaya akan protein untuk pertumbuhan dan perkembangan yang optimal. Kucing dewasa membutuhkan makanan yang mempertahankan berat badan yang sehat dan memberikan energi yang cukup. Kucing yang lebih tua atau dengan kondisi kesehatan tertentu mungkin memerlukan diet khusus. Diskusikan dengan dokter hewan untuk menentukan diet yang tepat untuk kucing Anda.\n\nBerikan Porsi yang Sesuai:\nPemberian porsi yang tepat adalah penting agar kucing tidak menjadi kelebihan berat badan atau kurang gizi. Ikuti petunjuk pada kemasan makanan untuk menentukan porsi yang dianjurkan berdasarkan berat badan dan usia kucing. Jika ada kekhawatiran tentang berat badan atau asupan makanan, konsultasikan dengan dokter hewan untuk saran lebih lanjut.\n\nJaga Kondisi Tubuh Ideal:\nPerhatikan kondisi tubuh kucing Anda secara rutin. Kondisi tubuh ideal kucing adalah ketika Anda dapat merasakan tulang rusuk dengan lembut namun tidak terlalu menonjol, dan pinggang terlihat jelas ketika dilihat dari atas. Jika kucing terlalu kurus atau terlalu gemuk, sesuaikan porsi makanan sesuai kebutuhan dan diskusikan dengan dokter hewan untuk rekomendasi yang tepat.\n\nJadwal Makan yang Teratur:\nMengatur jadwal makan yang teratur membantu kucing untuk memiliki pola makan yang baik dan mencegah makan berlebihan. Berikan makanan dalam porsi yang sama pada waktu yang tetap setiap harinya. Hindari memberikan makanan manusia atau memberi camilan yang berlebihan yang dapat mengganggu pola makan dan menyebabkan masalah kesehatan.\n\nAkses Terhadap Air Bersih:\nPastikan kucing memiliki akses yang cukup kepada air bersih dan segar sepanjang waktu. Air yang cukup sangat penting untuk menjaga hidrasi yang baik, fungsi pencernaan yang normal, dan kesehatan umum kucing.\n\nKesimpulan:\nMenjaga asupan makanan yang sehat untuk kucing adalah kunci untuk kesehatan yang optimal. Pilihlah makanan berkualitas yang sesuai dengan usia dan kebutuhan kucing Anda. Berikan porsi yang tepat, perhatikan kondisi tubuh, dan tetapkan jadwal makan yang teratur. Jangan lupa untuk memberikan akses yang cukup kepada air bersih. Dengan memperhatikan asupan makanan kucing dengan baik, Anda dapat membantu menjaga kesehatan dan kesejahteraan kucing Anda selama hidup mereka. Jika Anda memiliki kekhawatiran atau pertanyaan tentang nutrisi kucing Anda, selalu berkonsultasi dengan dokter hewan untuk saran yang lebih spesifik dan terarah.&quot;,
+                &quot;tag&quot;: &quot;Perawatan&quot;
+            }
+        ]
+    }
+}
+</code></pre>
+<hr />
+<h2 id="get-articlesid">GET /articles/{id}</h2>
+<p>Parameter: id</p>
+<p>Example: articles/article-1</p>
+<p>Response:</p>
+<pre><code class="language-json">{
+    &quot;status&quot;: &quot;success&quot;,
+    &quot;data&quot;: {
+        &quot;article&quot;: {
+            &quot;id&quot;: &quot;article-1&quot;,
+            &quot;writer&quot;: &quot;Huze Official&quot;,
+            &quot;title&quot;: &quot;Panduan Praktis untuk Menjaga dan Merawat Kucing Sphynx&quot;,
+            &quot;thumbnail&quot;: &quot;https://storage.googleapis.com/huze-images/2-article-1.png&quot;,
+            &quot;article&quot;: &quot;Menjaga dan merawat kucing Sphynx melibatkan perhatian khusus terhadap beberapa aspek penting. Pertama-tama, perawatan kulit menjadi fokus utama karena kulit kucing Sphynx cenderung sensitif dan rentan terhadap masalah kulit. Rutin mandikan kucing Sphynx menggunakan sampo khusus dan pastikan kulitnya kering sepenuhnya setelah mandi. Gunakan pelembap yang direkomendasikan oleh dokter hewan untuk menjaga kelembapan kulit mereka. Selain itu, lakukan pemeriksaan rutin pada kulit mereka untuk mendeteksi iritasi atau luka, dan jika ada masalah, segera berkonsultasi dengan dokter hewan.\n\nSelain perawatan kulit, kebersihan juga merupakan hal penting dalam merawat kucing Sphynx. Karena mereka tidak memiliki bulu yang dapat menyerap minyak dan kotoran, perhatikan kebersihan telinga mereka dengan membersihkannya secara teratur menggunakan kapas lembab atau cairan pembersih telinga yang disarankan. Sikat gigi kucing Sphynx minimal dua kali seminggu dan periksa serta bersihkan kuku mereka secara rutin untuk mencegah masalah kesehatan dan menjaga kebersihan mereka.\n\nAspek nutrisi juga tidak boleh diabaikan. Pastikan Anda memberikan makanan yang dirancang khusus untuk kucing Sphynx, yang mengandung protein yang cukup dan nutrisi penting lainnya. Hindari memberikan makanan manusia atau makanan yang tidak aman bagi kucing, dan berikan makanan dalam porsi yang tepat sesuai dengan petunjuk pada kemasan. Dengan mengatur pola makan yang baik, Anda dapat menjaga berat badan kucing Sphynx tetap sehat.\n\nTerakhir, perlindungan dari suhu ekstrem sangat penting untuk kucing Sphynx. Karena mereka tidak memiliki bulu sebagai pelindung, perhatikan suhu ruangan dan hindari perubahan suhu yang drastis. Selama musim dingin, berikan pakaian kucing atau sediakan tempat berjemur yang hangat. Di musim panas, jaga agar mereka tidak terpapar sinar matahari secara langsung, dan sediakan tempat berlindung yang sejuk. Dengan melakukan ini, Anda dapat menjaga kucing Sphynx tetap nyaman dan aman dari suhu ekstrem.\n\nDengan memberikan perawatan yang tepat dan memenuhi kebutuhan khusus kucing Sphynx, Anda akan membantu mereka hidup sehat, bahagia, dan nyaman. Tetaplah berkonsultasi dengan dokter hewan jika Anda memiliki pertanyaan atau kekhawatiran terkait kesehatan kucing Sphynx Anda.&quot;,
+            &quot;tag&quot;: &quot;Perawatan&quot;
+        }
+    }
+}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../account/users/" class="btn btn-neutral float-left" title="/users"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../data/cats/" class="btn btn-neutral float-right" title="/cats">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../account/users/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../data/cats/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
